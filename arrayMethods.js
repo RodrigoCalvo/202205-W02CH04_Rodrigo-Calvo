@@ -2,11 +2,7 @@
 export function isArray(item) {
     if (typeof item === 'object') {
         try {
-            if (typeof item.length === 'number') {
-                return true;
-            } else {
-                return false;
-            }
+            return typeof item.length === 'number';
         } catch (e) {
             return false;
         }
@@ -15,11 +11,7 @@ export function isArray(item) {
     }
 }
 export function isFunction(myFunction) {
-    if (typeof myFunction === 'function') {
-        return true;
-    } else {
-        return false;
-    }
+    return typeof myFunction === 'function';
 }
 export function arrayLength(array) {
     if (isArray(array)) {

@@ -27,7 +27,9 @@ const falseArrays = [
     undefined,
     true,
     null,
-    () => {},
+    (i) => {
+        i;
+    },
     { name: 'Pepe' },
     { name: 'Pepe', length: 'Km' },
 ];
@@ -71,7 +73,11 @@ describe('Given isFunction function', () => {
     });
     describe('When true function given', () => {
         test('Then it should return true', () => {
-            expect(isFunction(() => {})).toBe(true);
+            expect(
+                isFunction((i) => {
+                    i;
+                })
+            ).toBe(true);
         });
     });
 });
@@ -217,7 +223,11 @@ describe('Given some function', () => {
     describe('When receive falseArrays', () => {
         for (let i = 0; i < falseArrays.length; i++) {
             test('Then it should throw Error', () => {
-                expect(() => some(falseArrays[i], () => {})).toThrow();
+                expect(() =>
+                    some(falseArrays[i], (i) => {
+                        i;
+                    })
+                ).toThrow();
             });
         }
     });
@@ -249,7 +259,11 @@ describe('Given every function', () => {
     describe('When receive falseArrays', () => {
         for (let i = 0; i < falseArrays.length; i++) {
             test('Then it should throw Error', () => {
-                expect(() => every(falseArrays[i], () => {})).toThrow();
+                expect(() =>
+                    every(falseArrays[i], (i) => {
+                        i;
+                    })
+                ).toThrow();
             });
         }
     });
@@ -281,7 +295,11 @@ describe('Given find function', () => {
     describe('When receive falseArrays', () => {
         for (let i = 0; i < falseArrays.length; i++) {
             test('Then it should throw Error', () => {
-                expect(() => find(falseArrays[i], () => {})).toThrow();
+                expect(() =>
+                    find(falseArrays[i], (i) => {
+                        i;
+                    })
+                ).toThrow();
             });
         }
     });
@@ -307,7 +325,11 @@ describe('Given filter function', () => {
     describe('When receive falseArrays', () => {
         for (let i = 0; i < falseArrays.length; i++) {
             test('Then it should throw Error', () => {
-                expect(() => filter(falseArrays[i], () => {})).toThrow();
+                expect(() =>
+                    filter(falseArrays[i], (i) => {
+                        i;
+                    })
+                ).toThrow();
             });
         }
     });
@@ -333,7 +355,11 @@ describe('Given map function', () => {
     describe('When receive falseArrays', () => {
         for (let i = 0; i < falseArrays.length; i++) {
             test('Then it should throw Error', () => {
-                expect(() => map(falseArrays[i], () => {})).toThrow();
+                expect(() =>
+                    map(falseArrays[i], (i) => {
+                        i;
+                    })
+                ).toThrow();
             });
         }
     });
@@ -367,7 +393,11 @@ describe('Given findIndex function', () => {
     describe('When receive falseArrays', () => {
         for (let i = 0; i < falseArrays.length; i++) {
             test('Then it should throw Error', () => {
-                expect(() => findIndex(falseArrays[i], () => {})).toThrow();
+                expect(() =>
+                    findIndex(falseArrays[i], (i) => {
+                        i;
+                    })
+                ).toThrow();
             });
         }
     });
@@ -454,7 +484,11 @@ describe('Given reduce function', () => {
     describe('When receive falseArrays', () => {
         for (let i = 0; i < falseArrays.length; i++) {
             test('Then it should throw Error', () => {
-                expect(() => reduce(falseArrays[i], () => {})).toThrow();
+                expect(() =>
+                    reduce(falseArrays[i], (i) => {
+                        i;
+                    })
+                ).toThrow();
             });
         }
     });
