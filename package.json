@@ -1,0 +1,32 @@
+{
+  "name": "202205-w02ch02_rodrigo-calvo",
+  "version": "1.0.0",
+  "description": "1. Crea una cuenta en SonarCluud y crea un proyecto con el nombre del ejercicio de funciones de arrays del challenge anterior\r 2. Escanea el proyecto con SonarCloud\r 3. Aplica los cambios indicados por SonarCloud\r 4. Haz una rama de bugfix y haz un commit en GitHub con las correcciones",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --watchAll --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "prettier": {
+    "singleQuote": true
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.12",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^28.1.0"
+  }
+}
